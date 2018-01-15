@@ -29,8 +29,7 @@ public class SwaggerConfig {
     @Bean
     public SwaggerSpringMvcPlugin customImplementation() {
         return new SwaggerSpringMvcPlugin(this.springSwaggerConfig)
-                .apiInfo(new ApiInfo("Spring RESTful Authorization Demo Api",
-                        null, null, null, null, null)).
+                .apiInfo(new ApiInfo("Spring RESTful Authorization Demo Api", null, null, null, null, null)).
                         //将Timestamp类型全部转为Long类型
                         directModelSubstitute(Timestamp.class, Long.class);
     }
